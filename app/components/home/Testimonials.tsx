@@ -10,7 +10,7 @@ const testimonials = [
     quote:
       "ADCB Consultancy made my dream of practising in Dubai a reality. From selecting the right MDS branch to navigating the DHA licensing process, their guidance was impeccable. I'm now earning tax-free income as a specialist endodontist.",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&q=80&w=150",
+    avatar: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=150",
   },
   {
     name: "Dr. Rajesh Kumar",
@@ -127,9 +127,8 @@ export default function Testimonials() {
       <div className="max-w-[1440px] mx-auto px-8 lg:px-20">
         {/* Testimonials Section */}
         <div
-          className={`transition-all duration-1000 transform ${
-            isVisible ? "opacity-100 scale-100 blur-none" : "opacity-0 scale-97 blur-sm"
-          }`}
+          className={`transition-all duration-1000 transform ${isVisible ? "opacity-100 scale-100 blur-none" : "opacity-0 scale-97 blur-sm"
+            }`}
         >
           <div className="max-w-2xl mx-auto text-center mb-10">
             <span className="inline-flex items-center justify-center gap-3 text-[11px] tracking-[0.3em] uppercase text-black font-medium mb-2">
@@ -191,15 +190,14 @@ export default function Testimonials() {
                 {testimonials.map((testimonial, i) => (
                   <div
                     key={testimonial.name}
-                    className={`flex-shrink-0 w-full md:w-1/2 px-4 transition-all duration-1000 transform ${
-                      isVisible
+                    className={`flex-shrink-0 w-full md:w-1/2 px-4 transition-all duration-1000 transform ${isVisible
                         ? "opacity-100 translate-x-0 translate-y-0 scale-100 rotate-0"
                         : i % 3 === 0
-                        ? "opacity-0 -translate-y-8"
-                        : i % 3 === 1
-                        ? "opacity-0 translate-y-8"
-                        : "opacity-0 scale-95"
-                    }`}
+                          ? "opacity-0 -translate-y-8"
+                          : i % 3 === 1
+                            ? "opacity-0 translate-y-8"
+                            : "opacity-0 scale-95"
+                      }`}
                     style={{ transitionDelay: `${i * 100}ms` }}
                   >
                     <div className="bg-gradient-to-br from-neutral-100 to-neutral-200/60 p-8 rounded-lg flex flex-col justify-between min-h-[300px] h-full transition-all duration-300">
@@ -253,8 +251,8 @@ export default function Testimonials() {
                   key={i}
                   onClick={() => goTo(i)}
                   className={`h-1.5 transition-all duration-300 rounded-full ${activeIndex === i
-                      ? "w-8 bg-black"
-                      : "w-2 bg-black/20 hover:bg-black/40"
+                    ? "w-8 bg-black"
+                    : "w-2 bg-black/20 hover:bg-black/40"
                     }`}
                   aria-label={`Go to slide ${i + 1}`}
                 />
